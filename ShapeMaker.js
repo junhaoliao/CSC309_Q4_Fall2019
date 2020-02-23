@@ -14,14 +14,15 @@ ShapeMaker.prototype = {
         square.append(squareTextNode);
 
         // append the shape to "body"
-        const myBody = document.querySelector("body");
-        myBody.append(square);
+        const shapeDiv = document.querySelector("#shapes");
+        shapeDiv.append(square);
 
     },
     addCircle: function () {
 
-        // circles should follow the last circle: span is the best choice
-        const circle = document.createElement("span");
+        // DISCARDED: circles should follow the last circle: span is the best choice
+        // changed back to "div". "display" style was changed to "inline-block" in shapes.css
+        const circle = document.createElement("div");
         circle.className = "circle";
 
         // as specified by the question: no innerHTML/innerText permitted
@@ -29,8 +30,8 @@ ShapeMaker.prototype = {
         circle.append(circleTextNode);
 
         // append the shape to "body"
-        const myBody = document.querySelector("body");
-        myBody.append(circle);
+        const shapeDiv = document.querySelector("#shapes");
+        shapeDiv.append(circle);
 
     }
 };
